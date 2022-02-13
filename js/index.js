@@ -22,10 +22,19 @@ window.addEventListener('DOMContentLoaded', function(){
             {
                 $('.menuIcons').addClass('menuActive');
                 $('.menu').css('z-index','5');
+                setTimeout(() => {
+                    $('.menu .menuIcons ul').css('visibility','visible');
+                }, 250);
+                
             }
             else
             {
                 $('.menuIcons').removeClass('menuActive');
+                setTimeout(() => {
+                    $('.menu .menuIcons ul').css('visibility','hidden');
+                }, 500);
+                
+                
                 setTimeout(()=>{
                     $('.menu').css('z-index','1');
                 },1000);

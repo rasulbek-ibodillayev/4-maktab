@@ -8,13 +8,28 @@
 }
 @media only screen and (max-width: 768px) 
 {
+    html
+    {
+        font-size: 24px;
+    }
     .menu
     {
         right: 0.5rem;
         bottom: 1rem;
     }
+    .iosIcons
+    {
+        display: none;
+    }
 }
 @media only screen and (max-width: 578px) 
 {
-    
+    html
+    {
+        font-size: 16px;
+    }
+    .menu .menuIcons ul li a
+    {
+        font-size: 0.6rem;
+    }
 }
