@@ -8,6 +8,7 @@
 {
     --myFont: 'Source Serif 4', sans-serif;
     --myColor: rgba(51,107,254,0.7);
+    scroll-behavior: smooth;
 }
 body
 {
@@ -15,6 +16,11 @@ body
     min-height: 100vh;
     font-family: var(--myFont);
     overflow-y: scroll;
+}
+/*delete*/
+div[class ^= 'col']
+{
+    height: 24rem;
 }
 /*Loader*/
 .loader
@@ -168,7 +174,7 @@ header
     display: flex;
     align-items: center;
     position: fixed;
-    z-index: 1;
+    z-index: 50;
     transition: 0.3s ease-in-out;
 }
 header .headerIcons
@@ -219,11 +225,40 @@ main
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     position: relative;
     top: 20%;
     background-attachment: fixed;
 }
-main button
+.mainBtn
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.weather
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.weatherBody
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: var(--myFont);
+    /* color: var(--myColor); */
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 7px;
+    margin-bottom: 7px;
+}
+#weatherCity
+{
+    text-transform: uppercase;
+}
+main .mainBtn button
 {
     background-color: var(--myColor);
     padding: 7px 12px;
@@ -237,15 +272,15 @@ main button
     justify-content: center;
     align-items: center;
 }
-main button:hover
+main .mainBtn button:hover
 {
     box-shadow: 0 0 1rem #336BFE;
 }
-main button:nth-child(2)
+main .mainBtn button:nth-child(2)
 {
     margin-left: 2rem;
 }
-main button .dayNight
+main .mainBtn button .dayNight
 {
     font-size: 1.5rem;
     margin-right: 0.7rem;
@@ -253,18 +288,18 @@ main button .dayNight
 }
 /* / main*/
 /*First section*/
-#mainSection
+#cardSection
 {
     width: 100%;
 }
-#mainSection .container
+#cardSection .container
 {
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
 }
-#mainSection .container .card
+#cardSection .container .card
 {
     width: 250px;
     height: 300px;
@@ -276,11 +311,11 @@ main button .dayNight
     color: white;
     z-index: 2;
 }
-#mainSection .container .card:hover
+#cardSection .container .card:hover
 {
     top: -70px;
 }
-#mainSection .container .card .cardBox
+#cardSection .container .card .cardBox
 {
     width: 100%;
     height: 100%;
@@ -288,7 +323,7 @@ main button .dayNight
     border-radius: 18px 3px;
     border: 1px solid white;
 }
-#mainSection .container .card .cardBox .cardIcon
+#cardSection .container .card .cardBox .cardIcon
 {
     width: 100%;
     height: 40%;
@@ -296,11 +331,11 @@ main button .dayNight
     justify-content: center;
     align-items: center;
 }
-#mainSection .container .card .cardBox .cardIcon i
+#cardSection .container .card .cardBox .cardIcon i
 {
     font-size: 3rem;
 }
-#mainSection .container .card .cardBox .cardText
+#cardSection .container .card .cardBox .cardText
 {
     width: 100%;
     height: 60%;
@@ -308,3 +343,36 @@ main button .dayNight
     text-align: center;
 }
 /* / First section*/
+/* 4-maktab Section */
+#maktabSection
+{
+    width: 100%;
+}
+#maktabSection .labelSection
+{
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: var(--myFont);
+}
+#maktabSection .row .colCard
+{
+    height: 100%;
+    margin: 0 1rem;
+    padding: 7px;
+}
+#maktabSection .row .colCard .rightCard
+{
+    height: 100%;
+    background-color: var(--myColor);
+    border-radius: 12px 3px;
+    border: 1px solid white;
+}
+#maktabSection .row .colCard .leftCard
+{
+    height: 100%;
+    background-image: url('https://i.guim.co.uk/img/media/d4b256e746b79a35f6ae76347238900ec3b63d11/0_233_3500_2100/master/3500.jpg?width=465&quality=45&auto=format&fit=max&dpr=2&s=85507fea7a4ce731209a966d23eea695');
+    border-radius: 3px 12px;
+    border: 1px solid white;
+}
+/* / 4-maktab Section */
