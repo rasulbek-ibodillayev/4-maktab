@@ -29,6 +29,5 @@ window.addEventListener('DOMContentLoaded', () => {
       document.querySelector('#weatherInfo').textContent ="Hozir:" + Math.ceil(weather.main.temp - 273.15) + "°C";
       document.querySelector('#weatherMiddle').textContent = "max:" + Math.ceil(weather.main.temp_max - 273.15) + "°C"
       + " / " + " min:" + Math.ceil(weather.main.temp_min - 273.15) + '°C';
-        console.log(weather);
     }
 });

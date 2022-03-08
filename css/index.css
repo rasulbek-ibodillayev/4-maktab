@@ -16,6 +16,7 @@ body
     min-height: 100vh;
     font-family: var(--myFont);
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 /*delete*/
 div[class ^= 'col']
@@ -92,7 +93,7 @@ div[class ^= 'col']
     position: fixed;
     bottom: 40%;
     right: 5%;
-    z-index: 1;
+    z-index: 10;
     font-size: 3rem;
     cursor: pointer;
     color: #336BFE;
@@ -360,19 +361,69 @@ main .mainBtn button .dayNight
     height: 100%;
     margin: 0 1rem;
     padding: 7px;
+    border: 1px solid rgba(120, 120, 120, 0.5);
+    cursor: pointer;
 }
 #maktabSection .row .colCard .rightCard
 {
     height: 100%;
-    background-color: var(--myColor);
-    border-radius: 12px 3px;
+    background-image: url('/pictures/pic2.jpg');
+    border-radius: 3px;
     border: 1px solid white;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 #maktabSection .row .colCard .leftCard
 {
     height: 100%;
-    background-image: url('https://i.guim.co.uk/img/media/d4b256e746b79a35f6ae76347238900ec3b63d11/0_233_3500_2100/master/3500.jpg?width=465&quality=45&auto=format&fit=max&dpr=2&s=85507fea7a4ce731209a966d23eea695');
-    border-radius: 3px 12px;
+    background-image: url('/pictures/pic1.jpg');
+    border-radius: 3px;
     border: 1px solid white;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 /* / 4-maktab Section */
+/*  4-maktab js carousel section */
+#myCarousel
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+#myCarousel .myIcons
+{
+    width: 5rem;
+    height: 5rem;
+    z-index: 5;
+    color: #0456c8;
+    filter: drop-shadow(0 0 7px #336BFE) drop-shadow(0 0 12px #336BFE);
+    cursor: pointer;
+}
+#carouselCard
+{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+.carousel_item
+{
+    width: 30%;
+    height: 60vh;
+    padding: 7px;
+    position: absolute;
+    transition: all 1s;
+    
+}
+.carousel_item img
+{
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+}
+/* / 4-maktab js carousel section */
