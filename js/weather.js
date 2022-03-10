@@ -25,8 +25,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
     function displayWeather(weather)
     {
+      let date = new Date();
       document.querySelector('#weatherCity').textContent = weather.name + " / " + weather.sys.country;
-      document.querySelector('#weatherInfo').textContent ="Hozir:" + Math.ceil(weather.main.temp - 273.15) + "°C";
+      document.querySelector('#weatherInfo').textContent = date.getDate() + "/"+ (date.getMonth() + 1) + "/" + date.getFullYear() + " Hozir:" + Math.ceil(weather.main.temp - 273.15) + "°C";
       document.querySelector('#weatherMiddle').textContent = "max:" + Math.ceil(weather.main.temp_max - 273.15) + "°C"
       + " / " + " min:" + Math.ceil(weather.main.temp_min - 273.15) + '°C';
     }

@@ -17,9 +17,22 @@
         right: 0.5rem;
         bottom: 1rem;
     }
-    .iosIcons
+    .menuIcons .iosIcons
     {
         display: none;
+    }
+    #myCarousel
+    {
+        display: none;
+    }
+    #elon .elonText .textCard
+    {
+        top: 0;
+        left: 0;
+    }
+    .labelSection, #maktabSection .labelSection
+    {
+        font-size: 1.2rem;
     }
 }
 @media only screen and (max-width: 578px) 

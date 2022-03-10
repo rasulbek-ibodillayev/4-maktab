@@ -95,7 +95,6 @@ div[class ^= 'col']
     right: 5%;
     z-index: 10;
     font-size: 3rem;
-    cursor: pointer;
     color: #336BFE;
     filter: drop-shadow(0 0 7px #336BFE) drop-shadow(0 0 12px #336BFE);
 }
@@ -153,8 +152,9 @@ div[class ^= 'col']
 .menu .myMenu
 {
     transition: 0.7s ease-in-out;
+    cursor: pointer;
 }
-.menu:hover .myMenu
+.myMenu:hover
 {
     color: #336BFE;
     filter: drop-shadow(0 0 7px #18b201) drop-shadow(0 0 12px #18b201);
@@ -414,7 +414,7 @@ main .mainBtn button .dayNight
 .carousel_item
 {
     width: 30%;
-    height: 60vh;
+    height: 50vh;
     padding: 7px;
     position: absolute;
     transition: all 1s;
@@ -427,3 +427,124 @@ main .mainBtn button .dayNight
     border-radius: 3px;
 }
 /* / 4-maktab js carousel section */
+/* E'lonlar */
+.labelSection
+{
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: var(--myFont);
+}
+#elon
+{
+    width: 100%;
+}
+#elon .elonImg, #elon .elonText
+{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 1rem;
+}
+#elon .elonImg img
+{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#elon .elonText .textCard
+{
+    position: absolute;
+    width: 100%;
+    background-color: var(--myColor);
+    left: -32%;
+    top: 12%;
+    color: white;
+    font-family: var(--myFont);
+    font-size: 1rem;
+    padding: 7px;
+    text-indent: 1rem;
+    text-justify: distribute-all-lines;
+    border-top-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    transition: all 1s;
+}
+#elon .elonText .textCard:hover
+{
+    color: black;
+    cursor: pointer;
+}
+/* / E'lonlar */
+/* footer */
+footer
+{
+    width: 100%;
+    background-color: var(--myColor);
+    padding: 7px;
+    font-family: var(--myFont);
+}
+footer .footerLeft, footer .footerRight
+{
+    height: 100%;
+}
+footer .footerRight #map
+{
+    width: 100%;
+    height: 100%;
+}
+footer .footerLeft
+{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    color: white;
+}
+footer .footerLeft .footerIcons, footer .footerLeft .footerMenu
+{
+    border-top: 1px solid white;
+}
+footer .footerLeft .footerIcons a
+{
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+footer .footerLeft .footerIcons .iosIcons
+{
+    font-size: 2rem;
+}
+footer .footerLeft .footerIcons, footer .footerLeft .footerMenu
+{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+footer .footerLeft .footerIcons div, footer .footerLeft .footerMenu .icon
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+footer .footerLeft .footerMenu i
+{
+    font-size: 2rem;
+}
+footer .footerLeft .footerIcons .iosIcons, footer .footerLeft .footerMenu i
+{
+    transition: all 1s;
+    cursor: pointer;
+}
+footer .footerLeft .footerIcons .iosIcons:hover, footer .footerLeft .footerMenu i:hover
+{
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 7px #336BFE) drop-shadow(0 0 12px #336BFE);
+}
+/* / footer */

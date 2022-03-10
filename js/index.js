@@ -17,7 +17,7 @@ window.addEventListener('DOMContentLoaded', function(){
     /* / Scroll */
     /* menu */
     $(document).ready(function(){
-        $('.menu').click(function(){
+        $('.myMenu').click(function(){
             if(! $('.menuIcons').hasClass('menuActive'))
             {
                 $('.menuIcons').addClass('menuActive');
